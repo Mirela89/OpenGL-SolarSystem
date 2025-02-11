@@ -304,7 +304,7 @@ void DrawShadow(glm::vec3 position, glm::vec3 scale)
 	glm::mat4 shadowMatrix = matrTrans * matrScale;
 
 	// Transmiterea matricei pt umbra la shader
-	glUniform1i(codColLocation, 1r); // culoare neagra
+	glUniform1i(codColLocation, 1); // culoare neagra
 	glUniformMatrix4fv(myMatrixLocation, 1, GL_FALSE, &shadowMatrix[0][0]);
 
 	// Desenare umbra
